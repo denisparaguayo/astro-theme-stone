@@ -11,6 +11,8 @@ module.exports = {
       transparent: 'transparent',
       white: '#ffffff',
       primary: colors.stone,
+      pink: '#ff29bf',
+      azul: '#4a65ff',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],

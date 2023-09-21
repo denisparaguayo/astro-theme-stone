@@ -1,0 +1,24 @@
+---
+import modelos from '../../modelos.json';
+---
+
+<section class="container mx-auto p-5">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+    {
+      modelos.map((modelo) => (
+        <div class="rounded-lg  p-4 ">
+          <a href={`/${modelo.id}`} class="block">
+            <img
+              src={modelo.imagen}
+              alt={modelo.nombre}
+              class="mb-2 h-48 w-full rounded-lg object-cover"
+            />
+            <h2 class="text-gray-900 text-3xl   font-semibold">{modelo.nombre}</h2>
+            <div class="bg-pink mb-4 mt-2 h-1 w-10 rounded" />
+            <p class="text-gray-600"> {modelo.especialidades.join(', ')}</p>
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -2,21 +2,39 @@
 const services = [
   {
     step: '01',
-    name: 'Design',
+    name: 'Modelaje Profesional',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Ofrecemos servicios de modelaje profesional para desfiles de moda, sesiones de fotos y eventos promocionales. Nuestros modelos están entrenados y listos para destacar en la industria de la moda.',
   },
   {
     step: '02',
-    name: 'Develop',
+    name: 'Sesiones de Fotografía de Alta Calidad',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Capturamos momentos especiales con sesiones de fotografía de alta calidad. Ya sea para retratos personales, fotografía de moda o publicidad, nuestro equipo de fotógrafos está listo para crear imágenes impresionantes.',
   },
   {
     step: '03',
-    name: 'Maintain',
+    name: 'Asesoramiento de Imagen y Estilo',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Ayudamos a nuestros clientes a desarrollar su estilo personal y a destacar en cualquier ocasión. Nuestros expertos en moda y estilo ofrecen asesoramiento personalizado para lucir siempre elegante.',
+  },
+  {
+    step: '04',
+    name: 'Casting y Selección de Modelos',
+    description:
+      'Organizamos castings y seleccionamos modelos para diversos proyectos. Contamos con una amplia base de datos de modelos talentosos y podemos encontrar el ajuste perfecto para su evento o campaña.',
+  },
+  {
+    step: '05',
+    name: 'Promoción en Redes Sociales',
+    description:
+      'Impulse su marca en las redes sociales con nuestras estrategias de promoción. Creamos contenido atractivo y gestionamos campañas publicitarias para aumentar su presencia en línea.',
+  },
+  {
+    step: '06',
+    name: 'Eventos de Moda y Producción',
+    description:
+      'Organizamos eventos de moda y producimos desfiles de moda de alto nivel. Desde la planificación hasta la ejecución, nos encargamos de cada detalle para que su evento sea un éxito.',
   },
 ];
 ---
@@ -24,15 +42,18 @@ const services = [
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-12 sm:gap-16">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">
+        Servicios<div class="bg-pink h-1 w-20 rounded"></div>
+      </h2>
+
       <div class="grid gap-8 lg:grid-cols-3">
         {
           services.map((service) => (
-            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+            <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
               <p class="text-sm">{service.step}</p>
               <div class="flex flex-col gap-4">
                 <h3 class="text-xl font-medium">{service.name}</h3>
-                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
                   {service.description}
                 </p>
               </div>

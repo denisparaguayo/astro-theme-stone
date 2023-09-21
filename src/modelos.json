@@ -1,0 +1,77 @@
+[
+  {
+    "id": "modelo-1",
+    "nombre": "Maria Prieto",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "15,5",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": "modelo-2",
+    "nombre": "Juanita Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "3,5",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": "modelo-3",
+    "nombre": "Reinaldo Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "2,7",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": "modelo-4",
+    "nombre": "Denis  Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "8,9",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": "modelo-5",
+    "nombre": "Emilio Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "5,6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  }
+]
