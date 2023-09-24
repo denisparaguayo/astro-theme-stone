@@ -2,18 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import modelos from '../modelos.json';
 
+export const  prerender = false
 const id = Astro.params.id;
-
 let modelo;
 
 if (id) {
   modelo = modelos.find((m) => m.id === id);
 }
+
+
+
 ---
 
 <Layout
-  title={modelo ? modelo.nombre : 'Modelo The New Models'}
-  description={modelo ? modelo.experiencia : 'Formada en la Agencia The New Models'}
+  description="Modelaje profesional y eventos en Paraguay."
+  title="The New Models by Mary Prieto"
 >
   {
     modelo ? (
@@ -52,7 +55,7 @@ if (id) {
                   {modelo.imagenes.map((imagen) => (
                     <img
                       src={imagen}
-                      alt={modelo.especialidades.join(', ')}
+                      
                       class="w-full h-auto"
                     />
                   ))}
@@ -67,22 +70,13 @@ if (id) {
                 Volver a Modelos
               </a>
           </div>
-</section>
+    </section>
     ) : (
-    <div class="flex justify-center items-center min-h-screen">
-    <div class="text-center">
-      <h1 class="text-4xl font-semibold text-red-500">Página no Encontrada</h1>
-      <p class="text-gray-600">La página que estás buscando no existe.</p>
-        <a
-          href="/"
-          class="mt-4 inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
-        >
-          Ir a la Página de Inicio
-        </a>
-    </div>
-   </div>
+      <div class="text-center">
+        <h1 class="text-3xl font-semibold">Modelo no encontrado</h1>
+        <p class="text-gray-600">El modelo con ID {id} no existe.</p>
+      </div>
     )
   }
-</Layout>
-
+</Layout>;
 
