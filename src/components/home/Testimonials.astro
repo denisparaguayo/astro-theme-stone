@@ -1,59 +1,31 @@
 ---
-const testimonials = [
-  {
-    name: 'Discoteca BoraBora',
-    description: 'Anfitrion & RRPP',
-    image: '/assets/testimonial-1.webp',
-    message: 'Evento tematico el Chavo del 8',
-  },
-  {
-    name: 'Discoteca BoraBora',
-    description: 'Anfitrion & RRPP',
-    image: '/assets/testimonial-1.webp',
-    message: 'Evento tematico el Chavo del 8',
-  },
-  {
-    name: 'Discoteca BoraBora',
-    description: 'Anfitrion & RRPP',
-    image: '/assets/testimonial-1.webp',
-    message: 'Evento tematico el Chavo del 8',
-  },
-];
+import eventos from '../../eventos.json'; // Asegúrate de tener el archivo eventos.json en la ubicación correcta
 ---
 
-<section class="py-16 sm:py-20">
-  <div class="v mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-12 lg:gap-20">
-      <h2 class="text-left text-3xl font-medium tracking-tight sm:text-4xl">
-        Últimos Eventos<div class="bg-pink h-1 w-20 rounded"></div>
-      </h2>
-      <div
-        class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
-      >
-        {
-          testimonials.map((testimonial) => (
-            <figure class="mx-auto flex max-w-lg flex-col items-center gap-6 py-8 lg:px-8 lg:py-0">
-              <div class="flex flex-row gap-2">
-                {[...Array(1)].map(() => (
-                  <div class="h-1 w-20 rounded bg-white" />
-                ))}
-              </div>
-              <blockquote class="text-left text-lg italic leading-loose text-primary-950/70 dark:text-primary-200/70">
-                <p>{testimonial.message}</p>
-              </blockquote>
-              <figcaption class="flex flex-col gap-4">
-                <img class="mx-auto h-40 w-40 " src={testimonial.image} alt="" />
-                <div class="text-center">
-                  <div class="text-base font-medium">{testimonial.name}</div>
-                  <div class="text-sm text-primary-950/70 dark:text-primary-200/70">
-                    {testimonial.description}
-                  </div>
-                </div>
-              </figcaption>
-            </figure>
-          ))
-        }
-      </div>
-    </div>
+<section class="container mx-auto p-5">
+  <h2 class="mb-16 text-3xl font-medium tracking-tight sm:text-4xl">
+    Últimos Eventos<div class="h-1 w-20 rounded bg-pink"></div>
+  </h2>
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+    {
+      eventos
+        .slice()
+        .reverse()
+        .slice(0, 3)
+        .map((evento) => (
+          <div class="rounded-lg  p-4">
+            <a href={`/evento/${evento.id}`} class="block">
+              <img
+                src={evento.imagen}
+                alt={evento.nombre}
+                class="mb-2 h-48 w-full rounded-lg object-cover"
+              />
+              <h2 class="text-gray-900 text-3xl font-semibold">{evento.nombre}</h2>
+              <div class="mb-4 mt-2 h-1 w-10 rounded bg-pink" />
+              <p class="text-gray-600">{evento.descripcion}</p>
+            </a>
+          </div>
+        ))
+    }
   </div>
 </section>

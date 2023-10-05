@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import eventos from '../../eventos.json';
+
+export const prerender = false;
+
+const id = Astro.params.id;
+let evento;
+
+if (id) {
+  evento = eventos.find((e) => e.id === parseInt(id));
+}
+---
+
+<Layout description={evento.descripcion} title={evento.nombre}>
+  {
+    evento ? (
+      <section class="text-gray-600 body-font">
+        <h1 class="flex justify-center text-3xl font-semibold">{evento.nombre}</h1>
+        <div class="container mx-auto flex flex-col px-5 py-24">
+          <div class="mx-auto lg:w-4/6">
+            <div class="mt-10 flex flex-col items-center justify-center sm:flex-row">
+              <div class="text-center sm:w-1/3 sm:py-8 sm:pr-8">
+                <div class="flex flex-col text-left">
+                  <h2 class="text-gray-900 mb-4 text-3xl font-semibold">{evento.lugar}</h2>
+                  <p class="text-gray-600">Fecha: {evento.fecha}</p>
+                  <p class="text-gray-600">Descripción: {evento.descripcion}</p>
+                </div>
+              </div>
+              <div class="mt-4 border-t border-pink pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
+                <div class="flex justify-center">
+                  <img src={evento.imagen} alt={evento.nombre} class="h-50 w-50" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="mb-10 mt-4 flex justify-center text-3xl font-semibold">Galería de Fotos</h2>
+        <div class="container mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {evento.imagenes.map((imagen) => (
+            <img src={imagen} class="h-auto w-full" />
+          ))}
+        </div>
+
+        <div class="mt-10 flex items-center justify-center">
+          <a
+            href="/evento"
+            class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+          >
+            Volver a Eventos
+          </a>
+        </div>
+      </section>
+    ) : (
+      <section class="py-16 sm:py-20">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div class="flex flex-col items-start gap-8 sm:gap-10">
+            <div class="flex flex-col gap-4 sm:gap-6">
+              <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+                <div>404</div>
+                <div>Página no Encontrada</div>
+              </h1>
+              <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+                La página que estás buscando no existe.
+              </p>
+            </div>
+            <a
+              href="/"
+              class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+            >
+              Ir a la Página de Inicio
+            </a>
+          </div>
+        </div>
+      </section>
+    )
+  }
+</Layout>;

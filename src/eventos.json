@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "nombre": "Evento 1",
+    "fecha": "2023-10-15",
+    "lugar": "Lugar 1",
+    "descripcion": "Descripción del Evento 1",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Evento 2",
+    "fecha": "2023-10-15",
+    "lugar": "Lugar 2",
+    "descripcion": "Descripción del Evento 2",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Evento 3",
+    "fecha": "2023-10-15",
+    "lugar": "Lugar 3",
+    "descripcion": "Descripción del Evento 3",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Evento 4",
+    "fecha": "2023-10-15",
+    "lugar": "Lugar 4",
+    "descripcion": "Descripción del Evento 4",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Evento 5",
+    "fecha": "2023-10-15",
+    "lugar": "Lugar 5",
+    "descripcion": "Descripción del Evento 5",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Evento 6",
+    "fecha": "2023-10-15",
+    "lugar": "Lugar 6",
+    "descripcion": "Descripción del Evento 6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Evento 7",
+    "fecha": "2023-10-15",
+    "lugar": "Lugar 7",
+    "descripcion": "Descripción del Evento 7",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ]
+  }
+]

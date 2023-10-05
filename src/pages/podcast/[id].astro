@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import podcasts from '../../inspiracion.json';
+
+export const prerender = false;
+
+const id = Astro.params.id;
+let podcast;
+
+if (id) {
+  podcast = podcasts.find((e) => e.id === parseInt(id));
+}
+---
+
+<Layout
+  description="Descripción del podcast"
+  title={podcast ? podcast.titulo : 'Podcast no encontrado'}
+>
+  {
+    podcast ? (
+      <section class="text-gray-600 body-font">
+        <h1 class="flex justify-center text-3xl font-semibold">{podcast.titulo}</h1>
+        <div class="container mx-auto flex flex-col px-5 py-24">
+          <div class="mx-auto lg:w-4/6">
+            <div class="mt-10 flex flex-col items-center justify-center sm:flex-row">
+              <div class="text-center sm:w-2/3 sm:py-8 sm:pr-8">
+                <div class="flex flex-col text-left">
+                  <h2 class="text-gray-900 mb-5 text-3xl font-semibold">{podcast.descripcion}</h2>
+
+                  <p class="text-pink">
+                    Publicado el: <span class="text-white">{podcast.publicado}</span>
+                  </p>
+                  <p class="text-pink">
+                    Duración: <span class="text-white">{podcast.duracion} minutos</span>
+                  </p>
+
+                  <p class="text-pink">
+                    Etiquetas: <span class="text-white">{podcast.tags.join(', ')}</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-4 border-t border-pink pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
+                <div class="flex justify-center">
+                  <img src={podcast.imagen} alt={podcast.titulo} class="h-50 w-50" />
+                </div>
+                <audio controls src={podcast.archivo} class=" mt-5 w-full">
+                  Tu navegador no admite el elemento de audio.
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex items-center justify-center">
+          <a
+            href="/podcast"
+            class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+          >
+            Volver a Podcasts
+          </a>
+        </div>
+      </section>
+    ) : (
+      <section class="py-16 sm:py-20">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div class="flex flex-col items-start gap-8 sm:gap-10">
+            <div class="flex flex-col gap-4 sm:gap-6">
+              <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+                <div>404</div>
+                <div>Página no Encontrada</div>
+              </h1>
+              <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+                La página que estás buscando no existe.
+              </p>
+            </div>
+            <a
+              href="/podcasts"
+              class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+            >
+              Ir a la Página de Inicio
+            </a>
+          </div>
+        </div>
+      </section>
+    )
+  }
+</Layout>;

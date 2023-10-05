@@ -1,0 +1,53 @@
+---
+import modelos from '../../inspiracion.json';
+import Layout from '../../layouts/Layout.astro';
+
+const podcasts = modelos.map((modelo) => ({
+  id: modelo.id,
+  titulo: modelo.titulo,
+  descripcion: modelo.descripcion,
+  imagen: modelo.imagen,
+  archivo: modelo.archivo,
+  publicado: modelo.publicado,
+  duracion: modelo.duracion,
+  tags: modelo.tags,
+}));
+---
+
+<Layout description="Podcast de Mary Prieto" title="Lista de Podcast">
+  <div class="flex flex-col gap-4 sm:gap-6">
+    <h1 class="text-center text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">Podcast</h1>
+    <p
+      class="mx-auto max-w-xl justify-start text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl"
+    >
+      Todos los Podcast
+    </p>
+  </div>
+  <section class="container mx-auto p-5">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+      {
+        podcasts.map((podcast) => (
+          <div class="rounded-lg  p-4 ">
+            <a href={`/podcast/${podcast.id}`} class="block">
+              <img
+                src={podcast.imagen}
+                alt={podcast.titulo}
+                class="mb-2 h-48 w-full rounded-lg object-cover"
+              />
+              <h2 class="text-gray-900 text-3xl   font-semibold">{podcast.titulo}</h2>
+            </a>
+            <div class="mt-4 flex flex-col justify-between">
+              <p class="text-gray-600">
+                <span class="font-semibold text-pink">Publicado: </span> {''}
+                {podcast.publicado}
+              </p>
+              <p class="text-gray-600">
+                <span class="font-semibold text-pink">Etiquetas: </span> {podcast.tags.join(', ')}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

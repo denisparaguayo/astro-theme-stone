@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "titulo": "MODA POR TU CUENTA",
+    "descripcion": "Como aprender moda por tu cuenta Guía optima",
+    "archivo": "/assets/episodios/episodio1.mp3",
+    "imagen": "/assets/team-3.webp",
+    "publicado": "11/04/2023",
+    "duracion": "60",
+    "tags": ["podcast", "tecnologia", "noticias"]
+  },
+  {
+    "id": 2,
+    "titulo": "Episodio 2",
+    "descripcion": "Este es el primer episodio de mi podcast",
+    "archivo": "https://example.com/audio/episodio-1.mp3",
+    "imagen": "/assets/team-3.webp",
+    "publicado": "11/04/2023",
+    "duracion": "60",
+    "tags": ["podcast", "tecnologia", "noticias"]
+  },
+  {
+    "id": 3,
+    "titulo": "Episodio 3",
+    "descripcion": "Este es el primer episodio de mi podcast",
+    "archivo": "https://example.com/audio/episodio-1.mp3",
+    "imagen": "/assets/team-3.webp",
+    "publicado": "11/04/2023",
+    "duracion": "60",
+    "tags": ["podcast", "tecnologia", "noticias"]
+  }
+]
