@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Radio Vip Mix" description="Radio Online de Mary Prieto">
+  <main class="flex h-screen flex-col items-center justify-center">
+    <h1 class="mb-5 text-3xl font-semibold sm:text-4xl md:text-5xl">
+      Escucha Radio <span class="text-pink">Vip</span> Mix en <span class="text-rojo">Vivo</span>
+    </h1>
+
+    <p class="text-gray-600 mb-4">Disfruta de la mejor música en nuestra radio en línea.</p>
+
+    <!-- Reproductor de audio -->
+    <audio controls>
+      <source src="http://stream.zeno.fm/w9g1ptuypg0uv" type="audio/mpeg" />
+       Tu navegador no admite el elemento de audio.
+    </audio>
+  </main>
+</Layout>

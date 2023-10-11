@@ -1,14 +1,41 @@
 ---
-import Cta from '../components/modelos/Cta.astro';
-import Heading from '../components/modelos/Heading.astro';
-import ModelosTable from '../components/modelos/ModelosTable.astro';
 import Layout from '../layouts/Layout.astro';
+import modelos from '../modelos.json';
+
+const categoriasUnicas = [...new Set(modelos.map((modelo) => modelo.categoria))];
+
+// Objeto que mapea las categorías con las imágenes correspondientes
+const imagenesCategorias = {
+  hombres: '/assets/categoria-fotos/hombre.jpg',
+  mujeres: '/assets/categoria-fotos/mujer.jpg',
+  influencer: '/assets/categoria-fotos/influencer.jpg',
+};
+
+export const prerender = false;
 ---
 
-<Layout description="Perfil de Modelos" title="Modelos de la Agencia">
-  <Heading />
-
-  <ModelosTable />
-
-  <Cta />
-</Layout>
+<Layout description="Modelos disponibles en diferentes categorías" title="Modelos Disponibles">
+  <section class="container mx-auto p-5">
+    <h1 class="mb-16 text-3xl font-medium tracking-tight sm:text-4xl">
+      Categorías de Modelos
+      <div class="h-1 w-20 rounded bg-pink"></div>
+    </h1>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+      {
+        categoriasUnicas.map((categoria) => (
+          <div class="rounded-lg p-4" key={categoria}>
+            <a href={`/modelos/${categoria}`} class="block">
+              <img
+                src={imagenesCategorias[categoria]}
+                alt={categoria}
+                class=" w-full rounded-lg "
+              />
+              <h2 class="text-gray-900 text-3xl  font-semibold capitalize ">{categoria}</h2>
+              <div class="mb-4 mt-2 h-1 w-10 rounded bg-pink" />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>;

@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import modelos from '../../modelos.json';
+
+const modelosMujeres = modelos.filter((modelo) => modelo.categoria === 'mujeres');
+
+export const prerender = false;
+---
+
+<Layout description="Modelos de la categoría Mujeres" title="Modelos Mujeres">
+  <section class="container mx-auto p-5">
+    <h1 class="mb-16 text-3xl font-medium tracking-tight sm:text-4xl">
+      Modelos Mujeres
+      <div class="h-1 w-20 rounded bg-pink"></div>
+    </h1>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+      {
+        modelosMujeres.map((modelo) => (
+          <div class="rounded-lg p-4" key={modelo.id}>
+            <a href={`/modelos/${modelo.id}`} class="block">
+              <img
+                src={modelo.imagen}
+                alt={modelo.nombre}
+                class="mb-2 h-48 w-full rounded-lg object-cover"
+              />
+              <h2 class="text-gray-900 text-3xl font-semibold">{modelo.nombre}</h2>
+              <div class="mb-4 mt-2 h-1 w-10 rounded bg-pink" />
+              <p class="text-gray-600"> {modelo.especialidades.join(', ')}</p>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>;

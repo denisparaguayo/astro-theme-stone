@@ -13,6 +13,7 @@ module.exports = {
       primary: colors.stone,
       pink: '#ff29bf',
       azul: '#4a65ff',
+      rojo: '#Ff0000',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],

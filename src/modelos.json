@@ -12,7 +12,8 @@
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp"
-    ]
+    ],
+    "categoria": "mujeres"
   },
   {
     "id": "2",
@@ -27,7 +28,8 @@
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp"
-    ]
+    ],
+    "categoria": "mujeres"
   },
   {
     "id": "3",
@@ -42,7 +44,8 @@
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp"
-    ]
+    ],
+    "categoria": "mujeres"
   },
   {
     "id": "4",
@@ -57,7 +60,8 @@
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp"
-    ]
+    ],
+    "categoria": "hombres"
   },
   {
     "id": "5",
@@ -72,6 +76,119 @@
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp",
       "/assets/modelo-1/imagen1.webp"
-    ]
+    ],
+    "categoria": "hombres"
+  },
+  {
+    "id": "5",
+    "nombre": "Emilio Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "5,6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ],
+    "categoria": "hombres"
+  },
+  {
+    "id": "5",
+    "nombre": "Emilio Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "5,6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ],
+    "categoria": "mujeres"
+  },
+  {
+    "id": "5",
+    "nombre": "Emilio Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "5,6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ],
+    "categoria": "mujeres"
+  },
+  {
+    "id": "5",
+    "nombre": "Emilio Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "5,6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ],
+    "categoria": "mujeres"
+  },
+  {
+    "id": "5",
+    "nombre": "Emilio Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "5,6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ],
+    "categoria": "influencer"
+  },
+  {
+    "id": "5",
+    "nombre": "Emilio Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "5,6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ],
+    "categoria": "influencer"
+  },
+  {
+    "id": "5",
+    "nombre": "Emilio Rodríguez",
+    "edad": 25,
+    "altura": "5'9\"",
+    "experiencia": "5 años de experiencia en modelaje",
+    "especialidades": ["Pasarela", "Fotografía de moda", "Publicidad"],
+    "seguidores": "5,6",
+    "imagen": "/assets/team-3.webp",
+    "imagenes": [
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp",
+      "/assets/modelo-1/imagen1.webp"
+    ],
+    "categoria": "influencer"
   }
 ]
