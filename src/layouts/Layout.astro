@@ -4,33 +4,26 @@ import '@fontsource/inter/latin-500.css';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
+import BaseHead from '../components/BaseHead.astro';
 
 interface Props {
   description: string;
   title: string;
+  image: string;
 }
 
-const { description, title } = Astro.props;
+const { description, title, image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <title>Mary Prieto | {title}</title>
+    <BaseHead description={description} title={title} image={image} />
     <meta name="google-site-verification" content="QlZJ2h9-QRvOiVAVh1qKcCzmjdyX-dl6l2yoC_0Xjyg" />
     <ViewTransitions />
   </head>
   <body
-    class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
-  >
+    class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200">
     <Header />
     <main>
       <slot />
