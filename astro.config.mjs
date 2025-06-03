@@ -10,5 +10,5 @@ export default defineConfig({
   integrations: [tailwind(), compress()],
   output: 'server',
   adapter: netlify(),
-  site: 'https://maryprietomodelos.com',
+  site: 'https://maryprieto.netlify.app/',
 });

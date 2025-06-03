@@ -1,28 +1,23 @@
 ---
+// BaseHead.astro
 interface Props {
   title: string;
   description: string;
-  image?: string; // imagen relativa al sitio (ej: /assets/miimagen.jpg)
+  image?: string;
 }
 
 const { title, description, image = '/assets/hero.jpg' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const absoluteImageURL = new URL(image, Astro.site); // ¡Importante! Usar Astro.site, no Astro.url
+const absoluteImageURL = new URL(image, Astro.site);
 ---
-
-<!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="generator" content={Astro.generator} />
-
-<!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
 <title>Mary Prieto | {title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />

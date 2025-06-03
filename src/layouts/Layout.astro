@@ -9,7 +9,7 @@ import BaseHead from '../components/BaseHead.astro';
 interface Props {
   description: string;
   title: string;
-  image: string;
+  image?: string; // <- opcional
 }
 
 const { description, title, image } = Astro.props;
