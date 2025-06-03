@@ -12,7 +12,10 @@ if (id) {
 }
 ---
 
-<Layout description={evento.descripcion} title={evento.nombre}>
+<Layout
+  description={evento ? `${evento.nombre} - Evento destacado` : 'Evento no encontrado'}
+  title={evento ? `${evento.nombre}` : 'Evento no encontrado'}
+  image={evento ? evento.imagen : '/assets/hero.jpg'}>
   {
     evento ? (
       <section class="text-gray-600 body-font">
@@ -46,8 +49,7 @@ if (id) {
         <div class="mt-10 flex items-center justify-center">
           <a
             href="/evento"
-            class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
-          >
+            class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400">
             Volver a Eventos
           </a>
         </div>
@@ -67,8 +69,7 @@ if (id) {
             </div>
             <a
               href="/"
-              class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
-            >
+              class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400">
               Ir a la Página de Inicio
             </a>
           </div>
